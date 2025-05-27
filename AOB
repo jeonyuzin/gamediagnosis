@@ -14,4 +14,4 @@ setTimeout(function () {
             console.log('[*] Scan complete.');
         }
     });
-}, 100); // 100ms 후 실행
+}, 100); 
