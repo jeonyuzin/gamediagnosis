@@ -1,1 +1,16 @@
+setTimeout(function () {
+    const mod = Process.getModuleByName("Gamename.exe"); //게임명
+    const pattern = '40 53 48 83 EC 20 48 8B D9 E8 ?? ?? ?? ?? F3 0F 59 83 ?? ?? ?? ?? 48 83 C4 20 5B C3';
 
+    Memory.scan(mod.base, mod.size, pattern, {
+        onMatch: function (address, size) {
+            console.log('[+] Pattern found at:', address);
+        },
+        onError: function (reason) {
+            console.error('Scan error:', reason);
+        },
+        onComplete: function () {
+            console.log('[*] Scan complete.');
+        }
+    });
+}, 100); // 100ms 후 실행
