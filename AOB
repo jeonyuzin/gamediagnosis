@@ -1,4 +1,4 @@
-//unreal 5.5.4
+//unreal 5.5.4 GetGravityZ
 setTimeout(function () {
     const mod = Process.getModuleByName("Gamename.exe"); //게임명
     const pattern = '40 53 48 83 EC 20 48 8B D9 E8 ?? ?? ?? ?? F3 0F 59 83 ?? ?? ?? ?? 48 83 C4 20 5B C3';
